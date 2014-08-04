@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">EatMe</string>
+    <string name="save">Save</string>
+    <string name="search_here">Search foods here</string>
+    <string name="calories">Cal.:&#160;</string>
+    <string name="cholesterol">Chol.:&#160;</string>
+    <string name="carbohydrates">Carb.:&#160;</string>
+    <string name="sugar">Sugar:&#160;</string>
+    <string name="protein">Prot.:&#160;</string>
+    <string name="fat">Fat:&#160;</string>
+
+</resources>
