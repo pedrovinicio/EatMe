@@ -48,7 +48,6 @@ displayed in the back face of the list item. (eg. calories, fat...)
   Google Volley API - I've looked into google Volley API and looks quite interesting. If I had more time, you would 
   definetly that a look into that and probably that my chances :)
   
-  Object Relational Mapping Lite (ORM Lite) - I'm not that familiar with this framework and I didn't have too much that
-  to expend learning, but I'd you have used if I had more time also.
+  And I'd like to have used the Object Relational Mapping Lite (ORM Lite) for persisting Java objects to database.
   
   
