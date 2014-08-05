@@ -37,6 +37,7 @@ displayed on the back face of the list item. (eg. calories, fat...)
 
 - Show a progress bar while making the server request. On the current UI, the user has no feedback that 
   something is happening.
+- Separate the list_food_item_layout.xml into 3 layouts. One for the front face, another one for the back face, and the   last one that will be the container that includes both.
 - Customize the save button appearance.
 - Customize launcher icon appearance.
 
