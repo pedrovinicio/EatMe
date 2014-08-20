@@ -109,11 +109,15 @@ public class ListFoodActivity extends Activity implements FoodListener, OnClickL
 
 	@Override
 	public void onFoodLoaded(List<Food> foods) {
-		this.foodAdapter = new FoodArrayAdapter(this, R.layout.list_food_item_layout, foods);
-		this.listViewFood.setAdapter(foodAdapter);
-		this.listViewFood.setVisibility(View.VISIBLE);
-		
-		this.findViewById(R.id.buttonSave).setVisibility(View.VISIBLE);
+		if(foods != null){
+			this.foodAdapter = new FoodArrayAdapter(this, R.layout.list_food_item_layout, foods);
+			this.listViewFood.setAdapter(foodAdapter);
+			this.listViewFood.setVisibility(View.VISIBLE);
+			
+			this.findViewById(R.id.buttonSave).setVisibility(View.VISIBLE);
+		} else{
+			Toast.makeText(this, "Ia quebrar", Toast.LENGTH_SHORT).show();
+		}
 	}
 	
 	@Override
