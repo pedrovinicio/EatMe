@@ -1,6 +1,8 @@
 package example.eatme.comm;
 import java.util.List;
 
+import android.content.Context;
+
 import example.eatme.models.Food;
 import example.eatme.util.Cache;
 
@@ -11,10 +13,10 @@ public class DownloadManager {
 	
 	private LifeSumService lifeSumService;
 	
-	public DownloadManager() {
+	public DownloadManager(Context context) {
 		this.cache = new Cache<Food>();
 		
-		this.lifeSumService = new LifeSumService();
+		this.lifeSumService = new LifeSumService(context);
 	}
 	
 	public List<Food> downloadFood(String filter){
@@ -23,7 +25,11 @@ public class DownloadManager {
 			return this.cache.get(filter);
 		} else{
 			List<Food> downloadedFoods = this.lifeSumService.getFoods(filter); 
-			this.cache.insert(filter, downloadedFoods);
+			
+			if(downloadedFoods != null){
+				this.cache.insert(filter, downloadedFoods);
+			}
+			
 			return downloadedFoods;
 		}
 	}

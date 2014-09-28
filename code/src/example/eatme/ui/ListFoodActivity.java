@@ -116,7 +116,7 @@ public class ListFoodActivity extends Activity implements FoodListener, OnClickL
 			
 			this.findViewById(R.id.buttonSave).setVisibility(View.VISIBLE);
 		} else{
-			Toast.makeText(this, "Ia quebrar", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, this.getString(R.string.unknown_error), Toast.LENGTH_SHORT).show();
 		}
 	}
 	
@@ -134,9 +134,9 @@ public class ListFoodActivity extends Activity implements FoodListener, OnClickL
 				this.foodAdapter.clearSelectedItems();
 				this.foodAdapter.notifyDataSetChanged();
 				
-				Toast.makeText(this, "New items saved to database.", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, this.getString(R.string.msg_new_items_saved), Toast.LENGTH_SHORT).show();
 			} else{
-				Toast.makeText(this, "Select at least one item to save.", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, this.getString(R.string.msg_select_one), Toast.LENGTH_SHORT).show();
 			}
 		} else if(view.getId() == R.id.buttonSearch){
 			this.handler.removeMessages(DOWNLOAD_FOOD);

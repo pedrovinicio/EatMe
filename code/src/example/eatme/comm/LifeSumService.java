@@ -5,17 +5,24 @@ import java.util.ArrayList;
 
 import org.json.JSONException;
 
+import android.content.Context;
 import android.util.Log;
-import example.eatme.comm.client.LifeSumClient;
+import example.eatme.comm.mock.LifeSumClientMock;
 import example.eatme.models.Food;
 import example.eatme.util.Constants;
 import example.eatme.util.FoodParser;
 
 public class LifeSumService {
 
+	private Context context;
+	
+	public LifeSumService(Context context) {
+		this.context = context;
+	}
+	
 	public ArrayList<Food> getFoods(String filter) throws InvalidParameterException {
 		
-		LifeSumClient lifeSumClient = new LifeSumClient();
+		LifeSumClientMock lifeSumClient = new LifeSumClientMock(this.context);
 
 		if (filter == null || filter.equals("")) {
 			throw new InvalidParameterException("filter: " + filter);

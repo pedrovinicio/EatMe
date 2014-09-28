@@ -9,5 +9,10 @@
     <string name="sugar">Sugar:&#160;</string>
     <string name="protein">Prot.:&#160;</string>
     <string name="fat">Fat:&#160;</string>
-
+	<string name="please_wait">Please wait&#8230;</string>
+    <string name="loading_message">Retriving data from server.&#8230;</string>
+    
+    <string name="unknown_error">Unknown problem. Please try again.</string>
+	<string name="msg_select_one">Select at least one item to save.</string>
+    <string name="msg_new_items_saved">New items saved to database.</string>
 </resources>

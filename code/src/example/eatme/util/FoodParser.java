@@ -10,6 +10,10 @@ public class FoodParser {
 
 	public static ArrayList<Food> Parser(String content) throws JSONException {
 
+		if(content == null || content.isEmpty()){
+			return null;
+		}
+		
 		JSONObject reader = new JSONObject(content);
 
 		reader = reader.getJSONObject("response");
